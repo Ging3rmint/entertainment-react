@@ -23,17 +23,7 @@ const styledComponent = {
     }
   `,
   Input: styled.input`
-    border: none;
     width: 50%;
-    color: ${colors.white};
-    background-color: transparent;
-    caret-color: ${colors.red};
-    font-weight: 300;
-
-    ::placeholder {
-      color: ${colors.white};
-      opacity: 0.5;
-    }
   `,
   ErrorText: styled.span`
     width: 50%;
@@ -67,6 +57,7 @@ const InputField: React.FC<inputProps> = ({
       style={{ borderBottomColor: errorText ? colors.red : colors.greyishBlue }}
     >
       <Input
+        className='styled-input'
         type={type}
         placeholder={placeholder}
         value={value}

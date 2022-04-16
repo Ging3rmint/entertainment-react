@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { colors, validateEmail } from "../constants/helper";
+
+//hooks
 import { useNavigate } from "react-router-dom";
 
 //components
@@ -62,7 +64,7 @@ const Text = styled.p`
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const [isLogin, setLogin] = useState(false);
+  const [isLogin, setLogin] = useState(true);
   const [formValue, setFormValue] = useState<formValueConfig>({
     email: "",
     password: "",
@@ -114,7 +116,7 @@ const Login: React.FC = () => {
   return (
     <form onSubmit={onSubmitHandler} noValidate>
       <Header>
-        <Icon icon='logo' size={32} />
+        <Icon icon='logo' size={32} color={colors.red} />
       </Header>
       <LoginCard>
         <Title>{isLogin ? "Login" : "Sign Up"}</Title>
