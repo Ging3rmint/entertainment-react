@@ -119,7 +119,7 @@ const GlobalSearch: React.FC = () => {
   };
 
   const onKeyDownHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter" && suggestions.length) {
+    if ((event.key === "Enter" || event.key === "Go") && suggestions.length) {
       setSearchResult({ query: searchText, data: suggestions });
       setShowSuggestion(false);
       navigate("/search");

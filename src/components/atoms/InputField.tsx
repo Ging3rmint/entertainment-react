@@ -23,10 +23,9 @@ const styledComponent = {
     }
   `,
   Input: styled.input`
-    width: 50%;
+    width: 100%;
   `,
   ErrorText: styled.span`
-    width: 50%;
     text-align: right;
     position: absolute;
     top: 3px;
